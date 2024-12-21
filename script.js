@@ -13,6 +13,7 @@ $(document).ready(() => {
     })
     $('a[href^="#"]').on('click', function (event) {
         var target = $(this.getAttribute('href')); 
+            $(".listPart").toggleClass("openList");
         if (target.length) {
             event.preventDefault();
             var count = target.offset().top - 150// Prevent default anchor click behavior
@@ -61,57 +62,6 @@ $(document).ready(() => {
             lorem: "jhdfsgh hbbv hhsb  b hjhvv y sgy gygsyugfyg sysyab huh fun uadugc uudinfec ixv usygdyugfuygs jahhajshjhduhe nfucx chu fgg cagenfbh9sjdjjdj8eeus99syddhhcudh hbdyfysgdzhfg"
         }
     ]
-    // protfolioBaza.map((index) => {
-    //     // console.log(index)
-    //     var portfolioChild = $('<div>');
-    //     portfolioChild.addClass("portfolioChild");
-    //     var imgPart = $('<div>');
-    //     imgPart.addClass('imgPart');
-    //     var realImg = $(`<img src =${index.img}>`);
-    //     imgPart.append(realImg);
-    //     var infoPart = $("<div>");
-    //     infoPart.addClass("infoPart");
-    //     var infoP = $("<p>");
-    //     infoP.text(index.title);
-    //     var halfTitle = $('<span>');
-    //     halfTitle.text(index.halfTitle)
-    //     infoPart.append(infoP, halfTitle)
-    //     portfolioChild.append(imgPart, infoPart)
-    //     $(".portfolioParent").append(portfolioChild)
-    //     portfolioChild.on("click", () => {
-    //         localStorage.setItem('product', JSON.stringify(index))
-    //         var openedDiv = $(".openedDiv");
-    //         openedDiv.css('display', "flex");
-    //         $('.cancleBtn').on('click', function () {
-    //             openedDiv.hide();
-    //             openedDiv.html(''); // Очистить перед обновлением
-    //             // getProduct();
-    //             localStorage.removeItem('product')
-    //         })
-
-    //         function getProduct() {
-    //             var gotProduct = JSON.parse(localStorage.getItem('product'))
-    //             console.log(gotProduct);
-    //             var prodName = $('<h1>');
-    //             prodName.text(gotProduct.title);
-    //             var prodHalfName = $("<span>");
-    //             prodHalfName.text(gotProduct.halfTitle)
-    //             $(".productNameDiv").append(prodName, prodHalfName);
-    //             var prodImage = $(`<img src=${gotProduct.img}>`);
-    //             prodImage.src = gotProduct.img;
-    //             $('.productImage').append(prodImage)
-    //             var secondInfo = $("<span>");
-    //             secondInfo.text(gotProduct.secondInfo)
-    //             $(".secondInfo").append(secondInfo)
-    //         }
-    //         getProduct()
-    //         $(".secondBtnClose").on("click", () => {
-    //             openedDiv.html('')
-    //             openedDiv.hide();
-    //         })
-    //     })
-    // })
-
     // GPT traberak
     protfolioBaza.map((index) => { // index-i mej 1hatik poqr object-na 
         var portfolioChild = $('<div>');
